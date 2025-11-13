@@ -1,0 +1,21 @@
+name: CD workflow
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  NODE_VERSION: 22.0.0
+
+jobs:
+  cd:
+    runs-on: ubuntu-latest
+    name: Build and publish docker
+    steps:
+      - uses: actions/checkout@v5
+      - name: Build docker
+        run: docker build . -t chuotcona123/training:${{ github.sha }}
+
+      - name: Echo docker
+        run: docker image list

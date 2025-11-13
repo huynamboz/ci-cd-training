@@ -1,0 +1,23 @@
+name: CI workflow
+
+on:
+  pull_request:
+    branches:
+      - main
+
+env:
+  NODE_VERSION: 22.0.0
+
+jobs:
+  unit-test:
+    runs-on: ubuntu-latest
+    name: Run Unit Test
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Unit Test
+        run: npm run test
+      - name: Lint
+        run: npm run lint
