@@ -5,3 +5,9 @@ describe('sum', () => {
         expect(sum(1, 2)).toBe(3)
     })
 });
+
+describe('sum', () => {
+    it('should throw error if arguments are not numbers', () => {
+        expect(() => sum(1, '2')).toThrow('Arguments must be numbers')
+    })
+})
