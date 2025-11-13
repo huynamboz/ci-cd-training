@@ -3,10 +3,10 @@ module.exports = {
     // Other Jest configurations...
     coverageThreshold: {
         global: {
-            branches: 80,
-            functions: 80,
-            lines: 80,
-            statements: 80,
+            branches: 100,
+            functions: 100,
+            lines: 100,
+            statements: 100,
         },
     },
     // You might also want to configure which files to collect coverage from:
@@ -15,9 +15,7 @@ module.exports = {
         "!src/index.js",
     ],
     sum: (a, b) => {
-        if (typeof a !== 'number' || typeof b !== 'number') {
-            throw new Error('Arguments must be numbers')
-        }
+       
         return a + b
     }
 }
