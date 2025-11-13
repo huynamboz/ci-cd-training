@@ -5,7 +5,7 @@
   "scripts": {
     "start": "npm run start",
     "lint": "echo \"test: no test specified\" && exit 0",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "author": "",
   "license": "ISC",
