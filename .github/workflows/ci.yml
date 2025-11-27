@@ -17,4 +17,4 @@ jobs:
     uses: ./.github/workflows/test_workflow.yml
     with:
       branch: 'develop'
-      run-tests: true
+      # run-tests: true

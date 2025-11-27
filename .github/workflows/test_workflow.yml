@@ -3,9 +3,9 @@ name: Test workflow
 on:
   workflow_call:
     # inputs:
-    secrets:
-      envPAT:
-        required: true
+    # secrets:
+    #   envPAT:
+    #     required: true
 
 jobs:
   build:
