@@ -15,6 +15,6 @@ jobs:
   #       uses: huynamboz/ci-cd-training/.github/quality@v1
   call-reusable-workflow:
     uses: ./.github/workflows/test_workflow.yml
-    with:
-      branch: 'develop'
+    # with:
+    #   branch: 'develop'
       # run-tests: true
