@@ -7,9 +7,14 @@ on:
       - develop
 
 jobs:
-  unit-test:
-    runs-on: ubuntu-latest
-    name: Run Unit Test
-    steps:
-      - id: foo
-        uses: huynamboz/ci-cd-training/.github/quality@v1
+  # unit-test:
+  #   runs-on: ubuntu-latest
+  #   name: Run Unit Test
+  #   steps:
+  #     - id: foo
+  #       uses: huynamboz/ci-cd-training/.github/quality@v1
+  call-reusable-workflow:
+    uses: ci-cd-training/.github/workflows/test_workflow.yml
+    with:
+      branch: 'develop'
+      run-tests: true
