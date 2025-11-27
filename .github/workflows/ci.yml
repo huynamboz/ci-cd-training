@@ -14,7 +14,7 @@ jobs:
   #     - id: foo
   #       uses: huynamboz/ci-cd-training/.github/quality@v1
   call-reusable-workflow:
-    uses: huynamboz/ci-cd-training/.github/workflows/test_workflow.yml@develop
+    uses: ./.github/workflows/test_workflow.yml
     with:
       branch: 'develop'
       run-tests: true
